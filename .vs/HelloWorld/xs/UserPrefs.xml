@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{28210822-C316-4FE3-AC96-673CA4393B5C}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.HelloWorld FirstBuild="True" PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.ItemProperties.HelloWorld PreferredExecutionTarget="/Applications/Firefox.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -8,14 +8,19 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld/Controllers/WeatherForecastController.cs">
     <Files>
-      <File FileName="HelloWorld/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="HelloWorld/Controllers/WeatherForecastController.cs" Line="7" Column="16" />
+      <File FileName="HelloWorld/Program.cs" Line="15" Column="1" />
+      <File FileName="HelloWorld/appsettings.json" Line="9" Column="14" />
+      <File FileName="HelloWorld/WeatherForecast.cs" Line="13" Column="35" />
+      <File FileName="HelloWorld/appsettings.Development.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="HelloWorld" expanded="True">
-            <Node name="HelloWorld" expanded="True">
+            <Node name="HelloWorld" expanded="True" selected="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>

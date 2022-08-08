@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace HelloWorld.Controllers;
 
@@ -6,6 +7,8 @@ namespace HelloWorld.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
+    private IConfiguration _conf;
+
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -13,9 +16,10 @@ public class WeatherForecastController : ControllerBase
 
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IConfiguration config)
     {
         _logger = logger;
+        _conf = config;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
@@ -25,9 +29,9 @@ public class WeatherForecastController : ControllerBase
         {
             Date = DateTime.Now.AddDays(index),
             TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            Summary = Summaries[Random.Shared.Next(Summaries.Length)],
+            Hi = _conf["HI"]
         })
         .ToArray();
     }
 }
-
